@@ -4,9 +4,9 @@ class Application
     resp = Rack::Response.new
     time = Time.now
     if time.to_i < 12
-      resp.write "Good Afternoon!"
-      elsif time.to_i > 12
       resp.write "Good Morning!"
+      elsif time.to_i > 12
+      resp.write "Good Afternoon!"
     end
     resp.finish
   end
